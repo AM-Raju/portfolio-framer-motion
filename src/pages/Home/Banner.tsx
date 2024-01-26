@@ -18,6 +18,16 @@ const Banner = () => {
       },
     },
   };
+
+  const buttonAnimation = {
+    hover: {
+      scale: 1.1,
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+      },
+    },
+  };
   return (
     <motion.div
       className="flex justify-between items-center my-10"
@@ -32,7 +42,13 @@ const Banner = () => {
         <p className="text-6xl font-bold text-blue-500 ">Product Designer</p>
         <p className="text-5xl">From Bangladesh</p>
         <div className="flex gap-3 mt-5">
-          <button className="text-xl bg-blue-500 py-2 px-4 rounded">Contact on</button>
+          <motion.button
+            className="text-xl bg-blue-500 py-2 px-4 rounded"
+            variants={buttonAnimation}
+            whileHover="hover"
+          >
+            Contact on
+          </motion.button>
           <button className="text-xl bg-blue-500 py-2 px-4 rounded">Scheduled</button>
         </div>
       </div>
