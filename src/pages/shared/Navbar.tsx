@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const navAnimation = {
     hidden: {
-      y: -60,
+      y: -70,
     },
     visible: {
       y: -0,
@@ -26,7 +26,7 @@ const Navbar = () => {
     },
   };
   return (
-    <motion.nav variants={navAnimation} initial="hidden" animate="visible">
+    <motion.nav className="mt-10" variants={navAnimation} initial="hidden" animate="visible">
       <div className="flex justify-center items-center gap-5">
         <motion.a variants={navListAnimation} whileHover="hover" href="">
           My Work
